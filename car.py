@@ -8,7 +8,8 @@ class Car(ABC):
 
     
     def needs_service(self):
-        if self.Engine_used.engine_should_be_serviced() and self.Battery_used.Needs_service():
+        
+        if self.Engine_used.engine_should_be_serviced() or self.Battery_used.Needs_service():
             return True
         else:
             return False
